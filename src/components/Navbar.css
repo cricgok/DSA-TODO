@@ -1,0 +1,44 @@
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffccbc;
+    border-bottom: 2px solid #ff6f00;
+    padding: 10px 20px;
+    animation: floating 2s infinite alternate;
+}
+
+.navbar-link {
+    color: #004d40;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    filter: invert(43%) sepia(99%) saturate(2716%) hue-rotate(104deg) brightness(94%) contrast(90%);
+}
+
+.navbar-text {
+    color: #d81b60;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-3px);
+    }
+}
