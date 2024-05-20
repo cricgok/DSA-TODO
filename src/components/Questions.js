@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Questions.css'; // Import your custom CSS file
+import l from "../assests/l.png";
 
 export default function Questions({ no, name, qlist, Checked, setChecked, mode }) {
   
@@ -52,11 +53,11 @@ export default function Questions({ no, name, qlist, Checked, setChecked, mode }
   return (
     <div className="questions-container">
       <div className="heading">
-        <img className="logo" src="Sparkle.png" alt="Logo" />
+        <img className="logo" src={l} alt="Logo" />
         <h1 className="title">{name} Problems</h1>
       </div>
       <div className="breadcrumbs">
-        <Link className="breadcrumb-link" to="/"> Topics </Link>
+        <Link className="breadcrumb-link" to="/h"> Topics </Link>
         <p> / {name}</p>
       </div>
 

@@ -1,3 +1,4 @@
+// Navbar.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Status from './Status';
@@ -23,7 +24,7 @@ function Navbar({ mode, setmode }) {
                     </div>
                 </div>
             </div>
-            {hidden1 && <Status visi="hidden" />} 
+            <Status visi={!hidden1} /> 
         </div>
     )
 }

@@ -1,9 +1,10 @@
+// Status.js
 import React from 'react';
 import './Status.css'; // Import the custom CSS file
 
 function Status({ visi }) {
     return (
-        <div className={`${visi ? 'status-container.visible' : 'status-container'}`}>
+        <div className={`status-container ${visi ? 'visible' : ''}`}>
             <p className="status-title">Tips to Solve Problems:</p>
             <ul className="status-list">
                 <li>Understand the problem statement thoroughly.</li>

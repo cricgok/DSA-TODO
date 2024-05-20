@@ -1,33 +1,48 @@
+/* General container */
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
 }
 
+/* Title */
 .title {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Increase font size */
   color: #232f3e;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem; /* Adjust margin */
+  text-align: center; /* Center align */
 }
 
+/* Subtitle */
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Increase font size */
   color: #5f6975;
   margin-bottom: 2rem;
+  text-align: center; /* Center align */
 }
 
+/* Progress container */
 .progress-container {
   margin-bottom: 2rem;
   /* Add more styles as needed */
 }
 
+/* Card container */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  /* Add more styles as needed */
+  gap: 1.5rem; /* Increase gap */
+  padding: 1rem; /* Add padding */
+  border-radius: 1rem; /* Add border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: box-shadow 0.3s ease; /* Add transition */
 }
 
+.card-container:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
+}
+
+/* Footer */
 .footer {
   display: flex;
   justify-content: center;
@@ -35,19 +50,28 @@
   margin-top: 2rem;
   padding: 1rem;
   background-color: #f2f2f2;
+  border-top: 1px solid #ccc; /* Add top border */
 }
 
+/* Footer text */
 .footer-text {
-  font-size: 1rem;
+  font-size: 1.2rem; /* Increase font size */
   color: #5f6975;
 }
 
+/* Link */
 .link {
   color: #007bff;
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s ease; /* Add transition */
 }
 
+.link:hover {
+  color: #0056b3; /* Change color on hover */
+}
+
+/* Heart icon */
 .heart-icon {
   width: 24px;
   height: 24px;

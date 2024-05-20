@@ -1,43 +1,67 @@
-
+/* Status.css */
 .status-container {
+    display: none;
     position: fixed;
-    right: 0;
-    top: 2rem;
-    margin-right: 1rem;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 1rem;
-    max-width: 20rem;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 10px; /* Add border radius */
 }
 
 .status-container.visible {
-    opacity: 1;
-    visibility: visible;
+    display: block;
 }
 
 .status-title {
-    font-weight: bold;
-    color: #e30a0a;
-    font-size: larger;
-    font-style: oblique;
+    margin-top: 0;
+    color: #333; /* Darken the text color */
 }
 
 .status-list {
-    list-style-type: disc;
-    list-style-position: inside;
-    padding-left: 1rem;
+    list-style-type: none;
+    padding: 0;
 }
 
-.status-list.li {
-    color: #555;
-    margin-bottom: 0.5rem;
+/* Navbar.css */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #007bff; /* Change navbar background color */
+    color: white;
+    transition: background-color 0.3s ease; /* Add transition */
 }
 
-.status-list.li:last-child {
-    margin-bottom: 0;
+.navbar-container:hover {
+    background-color: #0056b3; /* Darken the background color on hover */
+}
+
+.navbar-left .navbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.navbar-text {
+    font-size: 1.2em;
+}
+
+.navbar-link:hover {
+    text-decoration: underline; /* Underline the navbar links on hover */
 }

@@ -5,12 +5,11 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
 function App() {
 
   const [mode, setmode] = useState("light");
+
+  const [searchTerm, setSearchTerm] = useState("");
     
   const [Checked12, setChecked12] = useState([]);
   const [Checked1, setChecked1] = useState([]);
@@ -766,48 +765,41 @@ function App() {
       done: "not",
     },
   ];
+  const allProblems = [
+    ...arrayq,
+    ...greedyq,
+    ...dpq,
+    ...Bsq,
+    ...heapq,
+    ...recursionq,
+    ...llq,
+    ...Btq,
+    ...Bstq,
+    ...Sqtq,
+    ...Backtrackingq,
+    ...Graphq,
+  ];
 
-  // const [topicsCompleted, setTopicsCompleted] = useState([]);
+ 
 
+  const filteredProblems = allProblems.filter(problem =>
+    problem.Q.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-  const [checked, setChecked] = useState({}); // Assuming checked is a state variable
-
-  const displayCongratulatoryPopup = (topic) => {
-    const progress = calculateProgress(topic);
-
-    if (progress === 100) {
-      alert(`Congratulations! You have completed the topic "${topic}"!`);
-    }
+  const handleSearch = (term) => {
+    setSearchTerm(term);
   };
 
-  const calculateProgress = (topic) => {
-    const completionStatus = checked[topic];
-    return completionStatus ? 100 : 0;
-  };
-// eslint-disable-next-line
-  const updateCompletionStatus = (topic, completed) => {
-    // eslint-disable-next-line
-    setChecked((prevState) => ({
-      ...prevState,
-      [topic]: completed,
-    }));
-
-    displayCongratulatoryPopup(topic);
-  };
-  
 
   return (
     <> 
    
       <Router>
-        <Navbar mode={mode} setmode={setmode}/>
+        <Navbar mode={mode} setmode={setmode} onSearch={handleSearch} />
         <Routes> 
-
-          <Route path="/" element={<Home/>}  />
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/signup' element={<Signup/>}/>
           <Route
-            path="/h"
+            exact
+            path=""
             element={
               <Lister
                 setprogress={setprogress}
@@ -824,7 +816,8 @@ function App() {
                 Checked9={Checked9}
                 Checked10={Checked10}
                 Checked11={Checked11}
-                // Checked10={Checked5}
+
+                problems={filteredProblems}
                 
                 name="Array"
                 mode={mode}
@@ -833,7 +826,8 @@ function App() {
           ></Route>
 
           <Route
-            path="/h/Array and string"
+            exact
+            path="/Array and string"
             element={
               <Questions
                 Checked={Checked12}
@@ -848,7 +842,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Greedy"
+            path="/Greedy"
             element={
               <Questions
                 Checked={Checked1}
@@ -863,7 +857,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Dynamic Programming"
+            path="/Dynamic Programming"
             element={
               <Questions
                 Checked={Checked2}
@@ -878,7 +872,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Binary search"
+            path="/Binary search"
             element={
               <Questions
                 Checked={Checked3}
@@ -893,7 +887,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Heaps"
+            path="/Heaps"
             element={
               <Questions
                 Checked={Checked4}
@@ -908,7 +902,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Recursion"
+            path="/Recursion"
             element={
               <Questions
                 Checked={Checked5}
@@ -923,7 +917,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Linked list"
+            path="/Linked list"
             element={
               <Questions
                 Checked={Checked6}
@@ -938,7 +932,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Binary Tree"
+            path="/Binary Tree"
             element={
               <Questions
                 Checked={Checked7}
@@ -953,7 +947,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Binary Search Tree"
+            path="/Binary Search Tree"
             element={
               <Questions
                 Checked={Checked8}
@@ -968,7 +962,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Stack and Queue"
+            path="/Stack and Queue"
             element={
               <Questions
                 Checked={Checked9}
@@ -983,7 +977,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Backtracking"
+            path="/Backtracking"
             element={
               <Questions
                 Checked={Checked10}
@@ -998,7 +992,7 @@ function App() {
 
           <Route
             exact
-            path="/h/Graphs"
+            path="/Graphs"
             element={
               <Questions
                 Checked={Checked11}
