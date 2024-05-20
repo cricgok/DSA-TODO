@@ -1,113 +1,116 @@
 /* Define theme colors */
 :root {
-    --primary-color: #0048fe;
-    --secondary-color: #000000;
-    --accent-color: #f80000;
-    --success-color: #0dfc0d;
-    --background-color: #ab96b2;
-    --finished-color: #00e70c;
-    --progress-background: #ea0f4d;
-    --progress-color: #33cc33;
-  }
-  
-  /* Card link */
-  .card-link {
-    text-decoration: none;
-  }
-  
-  /* Card container */
+  --primary-color: #232f3e;
+  --secondary-color: #5f6975;
+  --accent-color: #ff9900;
+  --success-color: #007bff;
+  --background-color: #ffffff;
+  --finished-color: #28a745;
+  --progress-background: #f2f2f2;
+  --progress-color: #007bff;
+}
+
+/* Card link */
+.card-link {
+  text-decoration: none;
+}
+
+/* Card container */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  background-color: var(--background-color);
+}
+
+/* Finished card */
+.card-finished {
+  background-color: var(--finished-color);
+}
+
+/* Card content */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Card title */
+.card-title {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+/* Card information */
+.card-info {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin: 0.5rem 0;
+}
+
+/* Card status */
+.card-status {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+/* Progress container */
+.progress-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Progress icon */
+.progress-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+/* Progress percent */
+.progress-percent {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--success-color);
+  margin: 0;
+}
+
+/* Progress bar container */
+.progress-bar-container {
+  height: 0.5rem;
+  width: 100%;
+  background-color: var(--progress-background);
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 100%;
+  background-color: var(--progress-color);
+  border-radius: 0.25rem;
+}
+
+/* Responsive design */
+@media screen and (min-width: 768px) {
   .card {
-    display: flex;
     flex-direction: column;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    border: 1px solid var(--primary-color);
-    border-radius: 0.5rem;
-    background-color: var(--background-color);
+    align-items: stretch;
   }
-  
-  /* Finished card */
-  .card-finished {
-    background-color: var(--finished-color);
-  }
-  
-  /* Card content */
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  
-  /* Card title */
-  .card-title {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin: 0;
-  }
-  
-  /* Card information */
-  .card-info {
-    font-size: 1rem;
-    color: var(--secondary-color);
-    margin: 0.5rem 0;
-  }
-  
-  /* Card status */
-  .card-status {
-    font-size: 1rem;
-    font-style: italic;
-    color: var(--accent-color);
-    margin: 0;
-  }
-  
-  /* Progress container */
-  .progress-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Progress icon */
-  .progress-icon {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 0.5rem;
-  }
-  
-  /* Progress percent */
-  .progress-percent {
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--success-color);
-    margin: 0;
-  }
-  
-  /* Progress bar container */
-  .progress-bar-container {
-    height: 0.5rem;
+
+  .card-image {
     width: 100%;
-    background-color: var(--progress-background);
-    border-radius: 0.25rem;
-    margin-top: 0.5rem;
+    height: auto;
+    margin-bottom: 1rem;
   }
-  
-  /* Progress bar */
-  .progress-bar {
-    height: 100%;
-    background-color: var(--progress-color);
-    border-radius: 0.25rem;
+
+  .card-content {
+    padding: 0 1rem;
   }
-  
-  /* Responsive design */
-  @media screen and (min-width: 768px) {
-    .card {
-      flex-direction: row;
-      align-items: center;
-    }
-  
-    .card-image {
-      width: 6rem;
-      height: 6rem;
-      margin-right: 1rem;
-    }
-  }
-  
+}
