@@ -23,7 +23,7 @@ const Login = () => {
         setError(null);
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:4000/api/login', {
+            const response = await axios.post('http://localhost:5000/api/login', {
                 email,
                 password
             });
@@ -35,7 +35,7 @@ const Login = () => {
             if (error.response && error.response.status === 401) {
                 setError(error.response.data.message);
             } else {
-                setError("Something went wrong. Please try again later.");
+                setError("Please Register and try again later.");
             }
         }
     };
