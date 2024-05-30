@@ -27,7 +27,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start --legacy-peer-deps\" \"cd Backend && node server.js\"",
+    "start": "react-scripts start --legacy-peer-deps",
     "build": " react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
