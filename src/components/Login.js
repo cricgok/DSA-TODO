@@ -23,7 +23,7 @@ const Login = () => {
         setError(null);
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:5000/api/login', {
+            const response = await axios.post('https://dsa-todo-2.onrender.com/api/login', {
                 email,
                 password
             });
