@@ -10,11 +10,11 @@ app.use(bodyParser.json());
 
 // Database credentials
 const db = mysql.createConnection({
-  host: 'monorail.proxy.rlwy.net',
+  host: 'junction.proxy.rlwy.net',
   user: 'root',
-  password: 'DrqgOXVeRccIxiCmosKAydFsiAFfBqxw',
+  password: 'PCcyAVniUrrgtxuXcLWQjGLAlIjXZWmP',
   database: 'railway',
-  port: 27851
+  port: 41518
 });
 
 // Connect to MySQL database
